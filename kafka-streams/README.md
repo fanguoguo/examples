@@ -91,7 +91,11 @@ There are two kinds of examples:
 * [ApplicationResetExample](src/main/java/io/confluent/examples/streams/ApplicationResetExample.java) (Java 8+)
   -- demonstrates the usage of the application reset tool (`bin/kafka-streams-application-reset`)
 * [GlobalKTablesExample](src/main/java/io/confluent/examples/streams/GlobalKTablesExample.java) (Java 8+)
-    -- demonstrates joining between `KStream` and `GlobalKTable`.
+  -- demonstrates joining between `KStream` and `GlobalKTable`.
+* [ProbabilisticCountingScalaIntegrationTest](src/test/java/io/confluent/examples/streams/algebird/ProbabilisticCountingScalaIntegrationTest.scala)
+  -- demonstrates how to probabilistically count items in an input stream using a
+  [Count-Min Sketch](https://en.wikipedia.org/wiki/Count%E2%80%93min_sketch) data structure (with the CMS implementation
+  of [Twitter Algebird](https://github.com/twitter/algebird))
 * And [further examples](src/main/java/io/confluent/examples/streams/).
 
 We also provide several **integration tests**, which demonstrate end-to-end data pipelines.  Here, we spawn embedded Kafka

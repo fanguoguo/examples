@@ -40,6 +40,7 @@
         <scala.version>${kafka.scala.version}.8</scala.version>
         <confluent.version>3.2.0</confluent.version>
         <scalatest.version>2.2.6</scalatest.version>
+        <algebird.version>0.13.0</algebird.version>
         <avro.version>1.7.7</avro.version>
         <jetty.version>9.2.12.v20150709</jetty.version>
         <jersey.version>2.19</jersey.version>
@@ -118,6 +119,12 @@
             <version>${jersey.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>algebird-core_${kafka.scala.version}</artifactId>
+            <version>${algebird.version}</version>
+        </dependency>
+
         <!-- Test dependencies -->
         <dependency>
             <groupId>junit</groupId>
@@ -130,6 +137,11 @@
             <artifactId>assertj-core</artifactId>
             <version>3.3.0</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.7.14</version>
         </dependency>
         <dependency>
             <groupId>org.apache.kafka</groupId>
